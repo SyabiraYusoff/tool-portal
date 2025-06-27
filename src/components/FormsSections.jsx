@@ -1,6 +1,7 @@
 // src/components/ToolsSection.jsx
 import { formMap } from '../data/formsConfig';
 
+
 export default function FormsSection({ activeRole }) {
     const formsForRole = Object.entries(formMap)
         .filter(([_, config]) => config.roles.includes(activeRole))
@@ -14,14 +15,14 @@ export default function FormsSection({ activeRole }) {
             {formsForRole.length === 0 ? (
                 <p className="text-gray-500">No forms available for this role.</p>
             ) : (formsForRole.map((form) => {
-                const fullUrl = `${window.location.origin}/forms/${form.id}`;
+                const fullUrl = `${window.location.origin}/tool-portal/form/${form.id}`;
                 const FormComponent = form.component;
                 return (
                     <div key={form.id}
                         className="p-4 border rounded-lg shadow hover:bg-gray-50 space-y-2">
                         <h2 className="text-lg font-semibold">{form.name}</h2>
                         <div className="flex gap-2 mb-2">
-                            <a href={`/form/${form.id}`} 
+                            <a href={fullUrl} 
                                 className="text-blue-600 underline text-sm" target="_blank" rel="noopener noreferrer">
                                 Open
                             </a>

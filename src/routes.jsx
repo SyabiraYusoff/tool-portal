@@ -11,6 +11,7 @@ export default function AppRoutes() {
       <Route path="/tool/:toolId" element={<ToolPage />} />
       <Route path="/form/:formId" element={<FormPage />} />
       {/* Add more routes as needed */}
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 }
