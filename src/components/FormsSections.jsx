@@ -28,7 +28,6 @@ export default function FormsSection({ activeRole }) {
                             </a>
                             <button onClick={() => navigator.clipboard.writeText(fullUrl)}
                                 className="text-sm text-gray-500 hover:text-gray-700">
-                                Copy External Link
                             </button>
                         </div>
                         {FormComponent && (

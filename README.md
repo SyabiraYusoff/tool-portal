@@ -26,3 +26,9 @@ To add a tool etc,
 ## Development 
 npm run dev 
 
+## build on gh pages
+npm run build
+
+## Always push changes to main brach 
+git add . && git commit -m "Update project files" && git push origin main
+
